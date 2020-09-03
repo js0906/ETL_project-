@@ -1,8 +1,9 @@
 --Query All
 Select * from wine;
 
---Query relevant columns
-create view average as
+--Query average points by country
+CREATE VIEW average AS
+
 SELECT country,
 COUNT(*),
 AVG(points) AS Average_points
@@ -10,13 +11,18 @@ FROM wine
 GROUP BY country
 ORDER BY AVG(points) DESC;
 
---Query average quality and 2018 imports in USD of countries 
-SELECT w.country, w.id, w.variety, i.imports_usd, a.average_points
+--Join average points with wine table, create a new view
+CREATE VIEW country_imports AS
+
+SELECT w.id, w.country, w.province, w.winery, w.variety, a.average_points, i.imports_usd 
 from wine as w
 INNER JOIN imports as i ON
 w.country=i.country
 INNER JOIN average as a ON
 a.country= w.country;
+
+SELECT * FROM country_imports
+ORDER BY average_points DESC;
 
 
 --Query for wine value: The best rated wine for less than $40
