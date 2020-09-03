@@ -18,7 +18,7 @@ For the final database, we loaded the data as Sqlite to read easily in Jupyter N
 
 The final tables/collections were an analysis of: average quality of wine from a country and how much it imports; highest quality of wine under $40; average quality of wine by country; looking at the countries with the cheapest wine; finding countries with the highest value wine (meaning cheapest with quality points above 90); identifying the cheapest as well as the most expensive wines; and, finally, the wines with a perfect score. 
 
-With our database, the end user will be able to sort and filter through wine information according to their data needs. They are able to search by country, average global wine score, average imports by $, as well as filter by provinces/regions or variety. We have compiled a comprehensive dataset that will be useful for anyone in the industry or anyone that has an interest in wine.
+We created a csv file of our final database, and in this file the end user will be able to sort and filter through wine information according to their data needs. They are able to search by country, average global wine score, average imports by $, as well as filter by provinces/regions or variety. We have compiled a comprehensive dataset that will be useful for anyone in the industry or anyone that has an interest in wine.
 
 _____________
 
