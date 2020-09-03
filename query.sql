@@ -8,7 +8,7 @@ COUNT(*),
 AVG(points) AS Average_points
 FROM wine
 GROUP BY country
-ORDER BY AVG(points) DESC;
+ORDER BY Average_points DESC;
 
 --Query for wine value: The best rated wine for less than $40
 SELECT id, variety, points, price, country, province, winery 
