@@ -5,16 +5,16 @@ DROP TABLE IF EXISTS imports;
 --Create a table for wine reviews
 CREATE TABLE wine (
 ID INT NOT NULL PRIMARY KEY,
-country VARCHAR,
-description VARCHAR,
-designation VARCHAR,
-points INTEGER,
-price INTEGER,
-province VARCHAR,
-region01 VARCHAR,
-region02 VARCHAR,
-variety VARCHAR,
-winery VARCHAR
+Country VARCHAR,
+Description VARCHAR,
+Designation VARCHAR,
+Points INTEGER,
+Price DECIMAL,
+Province VARCHAR,
+Primary_Region VARCHAR,
+Secondary_Region VARCHAR,
+Variety VARCHAR,
+Winery VARCHAR
 );
 
 --Check wine table

@@ -2,13 +2,21 @@
 Select * from wine;
 
 --Query relevant columns
-SELECT wine.id, wine.country, wine.designation, wine.points, wine.price, wine.province, wine.region01 FROM wine;
+create view average as
 SELECT country,
 COUNT(*),
 AVG(points) AS Average_points
 FROM wine
 GROUP BY country
-ORDER BY Average_points DESC;
+ORDER BY AVG(points) DESC;
+
+SELECT w.country, w.id, w.variety, i.imports_usd, a.average_points
+from wine as w
+INNER JOIN imports as i ON
+w.country=i.country
+INNER JOIN average as a ON
+a.country= w.country;
+
 
 --Query for wine value: The best rated wine for less than $40
 SELECT id, variety, points, price, country, province, winery 
