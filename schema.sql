@@ -11,8 +11,8 @@ Designation VARCHAR,
 Points INTEGER,
 Price DECIMAL,
 Province VARCHAR,
-Primary_Region VARCHAR,
-Secondary_Region VARCHAR,
+Region01 VARCHAR,
+Region02 VARCHAR,
 Variety VARCHAR,
 Winery VARCHAR
 );
@@ -23,9 +23,9 @@ select * from wine;
 --Create a table for wine imports
 CREATE TABLE imports (
 ID INT NOT NULL PRIMARY KEY,
-country VARCHAR(50) NOT NULL,
-imports_usd VARCHAR(50) NOT NULL,
-imports_change VARCHAR(50) NOT NULL
+Country VARCHAR(50) NOT NULL,
+Imports_USD VARCHAR(50) NOT NULL,
+Imports_Change VARCHAR(50) NOT NULL
 );
 
 --Check imports table
